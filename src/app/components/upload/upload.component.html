@@ -1,0 +1,16 @@
+<!-- Tiles -->
+<div class="container-fluid" style="margin-top: 6em">
+    <div class="row mb-2 d-flex">
+        <div class="col-sm-12 col-lg-12 d-flex flex-row align-items-center justify-content-end mb-2">
+           
+
+            <button mat-raised-button (click)="fileInput.click()" color="primary" class="nunito mr-2" [style.background]="'rgba(203, 153, 3, 1)'">
+                <mat-icon class="mat-18">upload_file</mat-icon> Upload JSON
+            </button>
+            <input hidden (change)="selectFileHab($any($event).target.files)" #fileInput type="file" id="file" accept=".json">
+            <br>
+            <mat-label *ngIf="selectedFileHab">{{selectedFileHab.name}}</mat-label>
+
+        </div>
+    </div>
+</div>

@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/theming";
+// @import "./assets/css/dashlite.css";
+@include mat-core();
+$my-app-primary: mat-palette($mat-indigo, 900);
+$my-app-accent: mat-palette($mat-pink, A700);
+$my-app-warn: mat-palette($mat-deep-orange, A400);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+$typography: mat-typography-config( $font-family: "Poppins, sans-serif", $headline: mat-typography-level(32px, 48px, 700));
+@include mat-core( $typography); // $typography is an **optional** argument for the mat-core
+.background-color-primary {
+    background-color: mat-color($my-app-primary);
+}
+
+.background-color-accent {
+    background-color: mat-color($my-app-accent);
+}
+
+.color-primary {
+    color: mat-color($my-app-primary);
+}
+
+.color-accent {
+    color: mat-color($my-app-accent);
+}
+
+.full-length {
+    width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    // overflow-x: auto;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.example-container-app {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

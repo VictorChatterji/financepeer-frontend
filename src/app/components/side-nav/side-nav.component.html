@@ -1,0 +1,16 @@
+<mat-list [style.cursor]="'pointer'" class="nunito">
+    <mat-list-item matRipple [routerLink]="[ '/list' ]" routerLinkActive="active-link" [matRippleColor]="'rgba(79, 131, 204, 0.10980392156862745)'" >
+        <mat-icon matListIcon>ballot</mat-icon>
+        <h3 matLine>List </h3>
+    </mat-list-item>
+
+    <mat-list-item matRipple [routerLink]="[ '/upload' ]" routerLinkActive="active-link" [matRippleColor]="'rgba(79, 131, 204, 0.10980392156862745)'" >
+        <mat-icon matListIcon>upload</mat-icon>
+        <h3 matLine>Upload </h3>
+    </mat-list-item>
+   
+    <mat-list-item matRipple [matRippleColor]="'rgba(79, 131, 204, 0.10980392156862745)'" (click)="logout()">
+        <mat-icon matListIcon>logout</mat-icon>
+        <h3 matLine> Logout </h3>
+    </mat-list-item>
+</mat-list>
